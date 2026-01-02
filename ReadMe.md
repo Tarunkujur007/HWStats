@@ -163,53 +163,53 @@ delimiter (`|`).**
 <td><p><strong>Example</strong></p></td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><p><strong>*</strong></p></td>
+<td><p><strong>SPECIAL_SYMBOL</strong></p></td>
+<td><p><strong>NA</strong></p></td>
+<td><p><strong>Special symbol attached at the beginning of config file if sent by clicking (flash to ESP32) button.</strong></p></td>
+<td><p><strong>*</strong></p></td>
 </tr>
 <tr class="odd">
+<td><p><strong>~</strong></p></td>
+<td><p><strong>SPECIAL_SYMBOL</strong></p></td>
+<td><p><strong>NA</strong></p></td>
+<td><p><strong>Special symbol attached at the beginning of data string and sends which mode is selected.</strong></p></td>
+<td><p><strong>~0</strong></p></td>
+</tr>
+<tr class="even">
 <td><p><strong>A</strong></p></td>
 <td><p><strong>CPU_TEMP</strong></p></td>
 <td><p><strong>°C</strong></p></td>
 <td><p><strong>CPU Package Temperature</strong></p></td>
 <td><p><strong>A50</strong></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p><strong>B</strong></p></td>
 <td><p><strong>CPU_LOAD</strong></p></td>
 <td><p><strong>%</strong></p></td>
 <td><p><strong>CPU Total Utilization</strong></p></td>
 <td><p><strong>B23</strong></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p><strong>C</strong></p></td>
 <td><p><strong>GPU_TEMP</strong></p></td>
 <td><p><strong>°C</strong></p></td>
 <td><p><strong>GPU Core Temperature</strong></p></td>
 <td><p><strong>C33</strong></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p><strong>D</strong></p></td>
 <td><p><strong>GPU_LOAD</strong></p></td>
 <td><p><strong>%</strong></p></td>
 <td><p><strong>GPU Core Utilization</strong></p></td>
 <td><p><strong>D45</strong></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p><strong>E</strong></p></td>
 <td><p><strong>RAM_USAGE</strong></p></td>
 <td><p><strong>GB</strong></p></td>
 <td><p><strong>RAM Usage</strong></p></td>
 <td><p><strong>E3.5</strong></p></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="odd">
 <td><p><strong>F</strong></p></td>
@@ -390,71 +390,57 @@ delimiter (`|`).**
 <td><p><strong>e(i)</strong></p></td>
 <td><p><strong>DRIVE(NUMBER)_TEMP</strong></p></td>
 <td><p><strong>°C</strong></p></td>
-<td><p><strong>e(0) = 1<sup>st</sup> Hard Disk Drive
-Temperature</strong></p>
-<p><strong>e(1) = 2<sup>nd</sup> Hard Disk Drive
-Temperature</strong></p>
-<p><strong>Hard Disks have higher priority than nvme
-ssds</strong></p></td>
-<td><p><strong>e(0)35</strong></p>
-<p><strong>e(1)33</strong></p>
-<p><strong>and so on</strong></p></td>
+<td><p><strong>e(0) = 1st Drive Temp, e(1) = 2nd Drive Temp.</strong></p></td>
+<td><p><strong>e(0)35</strong></p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>f(i)</strong></p></td>
-<td><p><strong>DRIVE(NUMBER)_USEDSPACE</strong></p></td>
+<td><p><strong>DRIVE(NUMBER)_USED</strong></p></td>
 <td><p><strong>%</strong></p></td>
-<td><p><strong>e(0) = 1<sup>st</sup> Hard Disk Drive Used
-Space</strong></p>
-<p><strong>e(1) = 2<sup>nd</sup> Hard Disk Used Space</strong></p>
-<p><strong>Hard Disks have higher priority than nvme
-ssds</strong></p></td>
-<td><p><strong>f(0)93</strong></p>
-<p><strong>f(1)98</strong></p>
-<p><strong>and so on</strong></p></td>
+<td><p><strong>f(0) = 1st Drive Used Space, f(1) = 2nd Drive Used.</strong></p></td>
+<td><p><strong>f(0)93</strong></p></td>
 </tr>
 <tr class="even">
-<td><p><strong>g</strong></p></td>
+<td><p><strong>@</strong></p></td>
 <td><p><strong>TIME</strong></p></td>
 <td><p><strong>HH:MM:TT</strong></p></td>
 <td><p><strong>Current Time in PC</strong></p></td>
-<td><p><strong>G10:37 AM</strong></p></td>
+<td><p><strong>@10:37 AM</strong></p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>h</strong></p></td>
+<td><p><strong>%</strong></p></td>
 <td><p><strong>DATE</strong></p></td>
-<td><p><strong>ddd dd.mm.yy</strong></p></td>
+<td><p><strong>Date</strong></p></td>
 <td><p><strong>Current Date in PC</strong></p></td>
-<td><p><strong>hWed 25.12.2025</strong></p></td>
+<td><p><strong>%Wed 25.12.2025</strong></p></td>
 </tr>
 <tr class="even">
-<td><p><strong>i</strong></p></td>
+<td><p><strong>$</strong></p></td>
 <td><p><strong>CPU_NAME</strong></p></td>
 <td><p><strong>STRING</strong></p></td>
 <td><p><strong>Complete CPU Name</strong></p></td>
-<td><p><strong>i12th gen Intel Core i5-12400f</strong></p></td>
+<td><p><strong>$12th gen Intel Core i5</strong></p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>j</strong></p></td>
+<td><p><strong>&</strong></p></td>
 <td><p><strong>GPU_NAME</strong></p></td>
 <td><p><strong>STRING</strong></p></td>
 <td><p><strong>Complete GPU Name</strong></p></td>
-<td><p><strong>jNvidia Geforce RTX 3060 Ti</strong></p></td>
+<td><p><strong>&Nvidia Geforce RTX 3060 Ti</strong></p></td>
 </tr>
 <tr class="even">
+<td><p><strong>^</strong></p></td>
+<td><p><strong>GAME_NAME</strong></p></td>
+<td><p><strong>STRING</strong></p></td>
+<td><p><strong>Current DirectX Game Name</strong></p></td>
+<td><p><strong>^The Last of Us</strong></p></td>
+</tr>
+<tr class="odd">
 <td><p><strong>#</strong></p></td>
 <td><p><strong>CUSTOM_TEXT</strong></p></td>
 <td><p><strong>STRING</strong></p></td>
-<td><p><strong>Anything Custom text if we want to send to external
-display via serial port</strong></p></td>
+<td><p><strong>Custom text sent via serial port</strong></p></td>
 <td><p><strong>#Hello World</strong></p></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
